@@ -35,7 +35,7 @@ Having file paths as comments provides valuable context in many scenarios:
 - **🤖 AI & LLM Context**: When sharing code with ChatGPT, Claude, or Copilot, the file path gives essential context about your project structure, helping AI provide more accurate suggestions
 - **📋 Code Sharing**: Copy-paste snippets become self-documenting, and colleagues immediately know where the code lives without asking "which file is this?"
 - **🔍 Code Review**: In NeoVim, GitHub PRs, diffs, or review tools, quickly identify which file you're viewing without checking the file tree
-- **🐛 Debugging**: When logging code or tracking errors, you instantly know the source file - especially useful in large monorepos
+- **🐛 Debugging**: When logging code or tracking errors, you instantly know the source file, and especially useful in large monorepos
 - **📝 Documentation**: Code examples in docs or wikis automatically reference their source location
 - **🏗️ Monorepo Navigation**: Essential for projects with similar filenames across different packages (e.g., multiple `index.ts` files)
 - **📸 Screenshots**: Share code screenshots with built-in attribution of where the code comes from
