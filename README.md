@@ -19,11 +19,9 @@
 Automatically adds the <strong>git project file path</strong> as a comment to the <strong>top of files</strong> when saved.
 </p>
 
-## 🕶️ What does it do?
+## 🎬 How it works
 
-Save any file, and this plugin will auto-write the git repository-relative file path as a comment at the top of that file.
-
-You can choose which filetypes to enable/disable. Or toggle the plugin on/off at any time.
+Triggered automatically on every save, with per-filetype control and easy toggle.
 
 <p align="center">
 <img width="499" height="221" alt="image" src="https://github.com/user-attachments/assets/fa75eecd-bbf4-4ee1-913d-d3a08c266d25" /><br />
