@@ -1,4 +1,4 @@
--- init.lua
+-- lua/comment_filename/init.lua
 local Config = require("comment_filename.config")
 local Save = require("comment_filename.save_filename_as_comment")
 

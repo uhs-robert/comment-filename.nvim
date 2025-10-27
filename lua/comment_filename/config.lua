@@ -1,3 +1,4 @@
+-- lua/comment_filename/config.lua
 local M = {}
 
 M.defaults = {
@@ -60,7 +61,83 @@ M.defaults = {
 		"*.nix",
 		"Chart.yaml",
 	},
-	allowed_ft = {}, -- map<string,bool>, empty = allow by pattern only
+	filetypes = {
+		-- web
+		javascript = true,
+		typescript = true,
+		javascriptreact = true,
+		typescriptreact = true,
+		vue = true,
+		svelte = true,
+		astro = true,
+		html = true,
+		css = true,
+		scss = true,
+		less = true,
+		-- scripts
+		sh = true,
+		bash = true,
+		zsh = true,
+		fish = true,
+		-- general
+		lua = true,
+		vim = true,
+		python = true,
+		ruby = true,
+		perl = true,
+		php = true,
+		r = true,
+		-- systems
+		c = true,
+		cpp = true,
+		objc = true,
+		objcpp = true,
+		cuda = true,
+		rust = true,
+		go = true,
+		zig = true,
+		v = true,
+		d = true,
+		nim = true,
+		crystal = true,
+		-- JVM & friends
+		java = true,
+		kotlin = true,
+		scala = true,
+		groovy = true,
+		-- mobile/other
+		swift = true,
+		dart = true,
+		-- functional
+		haskell = true,
+		elixir = true,
+		erlang = true,
+		ocaml = true,
+		clojure = true,
+		lisp = true,
+		scheme = true,
+		julia = true,
+		fsharp = true,
+		-- .NET
+		csharp = true,
+		-- markup/document
+		tex = true,
+		latex = true,
+		markdown = true,
+		-- data / config (only those that accept a clear comment)
+		sql = true,
+		toml = true,
+		conf = true,
+		dosini = true,
+		gitconfig = true,
+		nginx = true,
+		dockerfile = true,
+		make = true,
+		cmake = true,
+		nix = true,
+		helm = true,
+		-- note: yaml/json have poor comment support; excluded intentionally
+	},
 	which_key = true,
 	skip_gitignored = true,
 }

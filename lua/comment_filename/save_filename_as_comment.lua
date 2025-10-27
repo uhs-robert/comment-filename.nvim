@@ -1,3 +1,4 @@
+-- lua/comment_filename/save_filename_as_comment.lua
 local M = {}
 
 local function realpath(p)
@@ -131,7 +132,7 @@ function M.create_autocmds(cfg, state)
 			end
 
 			local ft = vim.bo[args.buf].filetype
-			if cfg.allowed_ft and next(cfg.allowed_ft) ~= nil and not cfg.allowed_ft[ft] then
+			if cfg.filetypes[ft] == false then
 				return
 			end
 
