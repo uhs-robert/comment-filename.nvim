@@ -30,8 +30,21 @@ You can choose which filetypes to enable/disable. Or toggle the plugin on/off at
   <strong>Example:</strong> <code>/path/to/repo/lua/comment_filename/config.lua</code>
 </p>
 
+## 💡 Why is this useful?
 
-## Features
+Having file paths as comments provides valuable context in many scenarios:
+
+- **🤖 AI & LLM Context**: When sharing code with ChatGPT, Claude, or Copilot, the file path gives essential context about your project structure, helping AI provide more accurate suggestions
+- **📋 Code Sharing**: Copy-paste snippets become self-documenting - colleagues immediately know where the code lives without asking "which file is this?"
+- **🔍 Code Review**: In NeoVim, GitHub PRs, diffs, or review tools, quickly identify which file you're viewing without checking the file tree
+- **🐛 Debugging**: When logging code or tracking errors, you instantly know the source file - especially useful in large monorepos
+- **📝 Documentation**: Code examples in docs or wikis automatically reference their source location
+- **🏗️ Monorepo Navigation**: Essential for projects with similar filenames across different packages (e.g., multiple `index.ts` files)
+- **📸 Screenshots**: Share code screenshots with built-in attribution of where the code comes from
+
+Think of it as automatic source attribution that follows your code everywhere it goes.
+
+## ✨ Features
 
 - 🔄 Automatically inserts file path comments on save at the top of the file
 - 📁 Uses git-relative paths (e.g., `-- lua/comment_filename/init.lua`)
@@ -41,7 +54,7 @@ You can choose which filetypes to enable/disable. Or toggle the plugin on/off at
 - 🎨 Uses Neovim's `commentstring` option for accurate comment syntax
 - 🌐 Global and per-buffer toggle controls
 
-## Installation
+## 📦 Installation
 
 ### [lazy.nvim](https://github.com/folke/lazy.nvim)
 
@@ -95,7 +108,7 @@ vim.keymap.set("n", "<leader>uH", "<cmd>CommentFilenameBufferToggle<cr>",
 EOF
 ```
 
-## Usage
+## 🚀 Usage
 
 Once installed, the plugin works automatically. Every time you save a file (`:w`), it will:
 
@@ -119,7 +132,7 @@ Or for Python files:
 
 And the list goes on...
 
-## Configuration
+## ⚙️ Configuration
 
 The plugin comes with sensible defaults and works out of the box. You can customize it by passing options to `setup()`:
 
@@ -181,14 +194,14 @@ And many more! See [config.lua](lua/comment_filename/config.lua) for the complet
 <!-- languages:end -->
 </details>
 
-## Commands
+## 💻️ Commands
 
 ### User Commands
 
 - `:CommentFilenameToggle` - Toggle the plugin globally (on/off)
 - `:CommentFilenameBufferToggle` - Toggle the plugin for the current buffer only
 
-### Keybindings
+### 🎹 Keybindings
 
 The plugin does not set up keybindings automatically. See the [Installation](#installation) section for examples on how to set up keybindings in your plugin manager's config function.
 
@@ -201,7 +214,7 @@ require("which-key").add({
 })
 ```
 
-### API Functions
+### 🔧 API Functions
 
 If you're into this sort of thing, here are the options you can play with:
 
@@ -212,11 +225,3 @@ cf.enable()   -- Enable globally
 cf.disable()  -- Disable globally
 cf.toggle()   -- Toggle global state
 ```
-
-## How It Works
-
-1. **BufWritePre Autocmd**: Triggers before each file save
-2. **Git Integration**: Uses `git check-ignore` to skip ignored files
-3. **Path Calculation**: Finds the git root and calculates the relative path
-4. **Comment Generation**: Uses `commentstring` option or filetype-specific fallbacks
-5. **Smart Insertion**: Checks for existing comments and respects shebangs/BOMs
