@@ -22,20 +22,6 @@ function M.setup(opts)
 		vim.b.comment_filename_disabled = not vim.b.comment_filename_disabled
 		vim.notify("Comment Filename on Save (buffer): " .. (vim.b.comment_filename_disabled and "OFF" or "ON"))
 	end, {})
-
-	if cfg.which_key then
-		local ok, wk = pcall(require, "which-key")
-		if ok then
-			wk.add({
-				{ "<leader>uh", "<cmd>CommentFilenameToggle<cr>", desc = "Toggle Comment Filename On Save (global)" },
-				{
-					"<leader>uH",
-					"<cmd>CommentFilenameBufferToggle<cr>",
-					desc = "Toggle Comment Filename On Save (buffer)",
-				},
-			})
-		end
-	end
 end
 
 function M.enable()

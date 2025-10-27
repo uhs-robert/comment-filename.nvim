@@ -138,7 +138,6 @@ M.defaults = {
 		helm = true,
 		-- note: yaml/json have poor comment support; excluded intentionally
 	},
-	which_key = true,
 	skip_gitignored = true,
 }
 
