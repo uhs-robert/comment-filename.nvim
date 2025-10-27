@@ -70,7 +70,7 @@ M.defaults = {
 		vue = true,
 		svelte = true,
 		astro = true,
-		html = true,
+		html = false,
 		css = true,
 		scss = true,
 		less = true,
@@ -121,9 +121,9 @@ M.defaults = {
 		-- .NET
 		csharp = true,
 		-- markup/document
-		tex = true,
-		latex = true,
-		markdown = true,
+		tex = false,
+		latex = false,
+		markdown = false,
 		-- data / config (only those that accept a clear comment)
 		sql = true,
 		toml = true,
