@@ -1,6 +1,9 @@
 <p align="center">
   <img
-    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4db.svg"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4ac.svg"
+    width="128" height="128" alt="Name emoji" />
+    <img
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4c4.svg"
     width="128" height="128" alt="Name emoji" />
 </p>
 <h1 align="center">comment_filename.nvim</h1>
@@ -13,16 +16,24 @@
 </p>
 
 <p align="center">
-Automatically adds the git project file path, as a comment, to the top of files when saved.
+Automatically adds the <strong>git project file path</strong> as a comment to the <strong>top of files</strong> when saved.
 </p>
 
 ## 🕶️ What does it do?
 
-A simple plugin that runs whenever you save a file. It writes the git repository-relative file path as a comment to the top of your files on save. You can choose which filetypes to enable/disable and toggle the plugin on/off at any time.
+Save any file, and this plugin will auto-write the git repository-relative file path as a comment at the top of that file.
+
+You can choose which filetypes to enable/disable. Or toggle the plugin on/off at any time.
+
+<p align="center">
+<img width="499" height="221" alt="image" src="https://github.com/user-attachments/assets/fa75eecd-bbf4-4ee1-913d-d3a08c266d25" /><br />
+  <strong>Example:</strong> <code>/path/to/repo/lua/comment_filename/config.lua</code>
+</p>
+
 
 ## Features
 
-- 🔄 Automatically inserts file path comments on save
+- 🔄 Automatically inserts file path comments on save at the top of the file
 - 📁 Uses git-relative paths (e.g., `-- lua/comment_filename/init.lua`)
 - 🎯 Smart filetype detection with 50+ supported languages
 - 🚫 Skips gitignored files by default
@@ -41,7 +52,7 @@ A simple plugin that runs whenever you save a file. It writes the git repository
   config = function(_, opts)
     require("comment_filename").setup(opts)
 
-    -- Optional: Set up keybindings (compatible with which-key.nvim auto-discovery)
+    -- Optional: Set up keybindings to fit your setup (compatible with which-key.nvim auto-discovery)
     vim.keymap.set("n", "<leader>uh", "<cmd>CommentFilenameToggle<cr>",
       { desc = "Toggle Comment Filename (global)" })
     vim.keymap.set("n", "<leader>uH", "<cmd>CommentFilenameBufferToggle<cr>",
@@ -100,11 +111,13 @@ When you save a file at `/path/to/repo/src/utils/helper.js`, the plugin adds:
 // src/utils/helper.js
 ```
 
-For Python files:
+Or for Python files:
 
 ```python
 # src/services/auth.py
 ```
+
+And the list goes on...
 
 ## Configuration
 
@@ -136,30 +149,37 @@ require("comment_filename").setup({
 })
 ```
 
-### Default Disabled Filetypes
+<details>
+<summary>⛔ Default Disabled Filetypes</summary><br/>
+
+<!-- disabled:start -->
 
 The following filetypes are disabled by default:
 
 - `html` - Often contains templates or generated content
 - `markdown`, `tex`, `latex` - Document formats where file paths are less useful
 
-### Supported Languages
+<!-- disabled:end -->
+</details>
 
-The plugin supports 50+ languages including:
+<details>
+<summary>💬 Supported Languages</summary><br/>
 
-**Web**: JavaScript, TypeScript, React (JSX/TSX), Vue, Svelte, Astro, CSS, SCSS
+<!-- languages:start -->
 
-**Systems**: C, C++, Rust, Go, Zig, CUDA
+The plugin supports 50+ languages, including:
 
-**Scripts**: Lua, Python, Ruby, Perl, PHP, Bash, Zsh, Fish
-
-**JVM**: Java, Kotlin, Scala, Groovy
-
-**Functional**: Haskell, Elixir, OCaml, Clojure, F#
-
-**Config**: SQL, TOML, Nginx, Dockerfile, Makefile, Nix
+- **Web**: JavaScript, TypeScript, React (JSX/TSX), Vue, Svelte, Astro, CSS, SCSS
+- **Systems**: C, C++, Rust, Go, Zig, CUDA
+- **Scripts**: Lua, Python, Ruby, Perl, PHP, Bash, Zsh, Fish
+- **JVM**: Java, Kotlin, Scala, Groovy
+- **Functional**: Haskell, Elixir, OCaml, Clojure, F#
+- **Config**: SQL, TOML, Nginx, Dockerfile, Makefile, Nix
 
 And many more! See [config.lua](lua/comment_filename/config.lua) for the complete list.
+
+<!-- languages:end -->
+</details>
 
 ## Commands
 
@@ -172,7 +192,7 @@ And many more! See [config.lua](lua/comment_filename/config.lua) for the complet
 
 The plugin does not set up keybindings automatically. See the [Installation](#installation) section for examples on how to set up keybindings in your plugin manager's config function.
 
-The keybindings shown use `vim.keymap.set()` which is compatible with which-key.nvim's auto-discovery feature. If you prefer to explicitly register with which-key, you can use:
+The keybindings shown use `vim.keymap.set()`, which is compatible with which-key.nvim's auto-discovery feature. If you prefer to explicitly register with which-key, you can use:
 
 ```lua
 require("which-key").add({
@@ -181,7 +201,9 @@ require("which-key").add({
 })
 ```
 
-### Programmatic API
+### API Functions
+
+If you're into this sort of thing, here are the options you can play with:
 
 ```lua
 local cf = require("comment_filename")
@@ -195,6 +217,6 @@ cf.toggle()   -- Toggle global state
 
 1. **BufWritePre Autocmd**: Triggers before each file save
 2. **Git Integration**: Uses `git check-ignore` to skip ignored files
-3. **Path Calculation**: Finds git root and calculates relative path
+3. **Path Calculation**: Finds the git root and calculates the relative path
 4. **Comment Generation**: Uses `commentstring` option or filetype-specific fallbacks
 5. **Smart Insertion**: Checks for existing comments and respects shebangs/BOMs
