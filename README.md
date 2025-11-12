@@ -24,7 +24,7 @@ Automatically adds the <strong>git project file path</strong> as a comment to th
 Triggered automatically on every save, with per-filetype control and easy toggle.
 
 <p align="center">
-<img width="499" height="221" alt="image" src="https://github.com/user-attachments/assets/fa75eecd-bbf4-4ee1-913d-d3a08c266d25" /><br />
+<img width="auto" height="auto" alt="image" src="./assets/comment-filename.png" /><br />
   <strong>Example:</strong> <code>/path/to/repo/lua/comment_filename/config.lua</code>
 </p>
 
