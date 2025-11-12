@@ -6,13 +6,13 @@
     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4c4.svg"
     width="128" height="128" alt="Name emoji" />
 </p>
-<h1 align="center">comment_filename.nvim</h1>
+<h1 align="center">Comment Filename</h1>
 
 <p align="center">
-  <a href="https://github.com/uhs-robert/comment_filename.nvim/stargazers"><img src="https://img.shields.io/github/stars/uhs-robert/comment_filename.nvim?colorA=192330&colorB=skyblue&style=for-the-badge&cacheSeconds=4300"></a>
-  <a href="https://github.com/uhs-robert/comment_filename.nvim/issues"><img src="https://img.shields.io/github/issues/uhs-robert/comment_filename.nvim?colorA=192330&colorB=khaki&style=for-the-badge&cacheSeconds=4300"></a>
-  <a href="https://github.com/uhs-robert/comment_filename.nvim/contributors"><img src="https://img.shields.io/github/contributors/uhs-robert/comment_filename.nvim?colorA=192330&colorB=8FD1C7&style=for-the-badge&cacheSeconds=4300"></a>
-  <a href="https://github.com/uhs-robert/comment_filename.nvim/network/members"><img src="https://img.shields.io/github/forks/uhs-robert/comment_filename.nvim?colorA=192330&colorB=CFA7FF&style=for-the-badge&cacheSeconds=4300"></a>
+  <a href="https://github.com/uhs-robert/comment-filename.nvim/stargazers"><img src="https://img.shields.io/github/stars/uhs-robert/comment-filename.nvim?colorA=192330&colorB=skyblue&style=for-the-badge&cacheSeconds=4300"></a>
+  <a href="https://github.com/uhs-robert/comment-filename.nvim/issues"><img src="https://img.shields.io/github/issues/uhs-robert/comment-filename.nvim?colorA=192330&colorB=khaki&style=for-the-badge&cacheSeconds=4300"></a>
+  <a href="https://github.com/uhs-robert/comment-filename.nvim/contributors"><img src="https://img.shields.io/github/contributors/uhs-robert/comment-filename.nvim?colorA=192330&colorB=8FD1C7&style=for-the-badge&cacheSeconds=4300"></a>
+  <a href="https://github.com/uhs-robert/comment-filename.nvim/network/members"><img src="https://img.shields.io/github/forks/uhs-robert/comment-filename.nvim?colorA=192330&colorB=CFA7FF&style=for-the-badge&cacheSeconds=4300"></a>
 </p>
 
 <p align="center">
@@ -58,7 +58,7 @@ Think of it as automatic source attribution that follows your code everywhere it
 
 ```lua
 {
-  "uhs-robert/comment_filename.nvim",
+  "uhs-robert/comment-filename.nvim",
   opts = {},
   config = function(_, opts)
     require("comment_filename").setup(opts)
@@ -76,7 +76,7 @@ Think of it as automatic source attribution that follows your code everywhere it
 
 ```lua
 use {
-  "uhs-robert/comment_filename.nvim",
+  "uhs-robert/comment-filename.nvim",
   config = function()
     require("comment_filename").setup()
 
@@ -92,7 +92,7 @@ use {
 ### [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'uhs-robert/comment_filename.nvim'
+Plug 'uhs-robert/comment-filename.nvim'
 
 " In your init.lua or in a lua block
 lua << EOF
