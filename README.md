@@ -9,8 +9,8 @@
 <h1 align="center">Comment Filename</h1>
 
 <p align="center">
-  <a href="https://github.com/uhs-robert/comment-filename.nvim/stargazers"><img src="https://img.shields.io/github/stars/uhs-robert/comment-filename.nvim?colorA=192330&colorB=skyblue&style=for-the-badge&cacheSeconds=4300"></a>
-  <a href="https://github.com/uhs-robert/comment-filename.nvim/issues"><img src="https://img.shields.io/github/issues/uhs-robert/comment-filename.nvim?colorA=192330&colorB=khaki&style=for-the-badge&cacheSeconds=4300"></a>
+  <a href="https://github.com/uhs-robert/comment-filename.nvim/stargazers"><img src="https://img.shields.io/github/stars/uhs-robert/comment-filename.nvim?colorA=192330&colorB=khaki&style=for-the-badge&cacheSeconds=4300"></a>
+  <a href="https://github.com/uhs-robert/comment-filename.nvim/issues"><img src="https://img.shields.io/github/issues/uhs-robert/comment-filename.nvim?colorA=192330&colorB=skyblue&style=for-the-badge&cacheSeconds=4300"></a>
   <a href="https://github.com/uhs-robert/comment-filename.nvim/contributors"><img src="https://img.shields.io/github/contributors/uhs-robert/comment-filename.nvim?colorA=192330&colorB=8FD1C7&style=for-the-badge&cacheSeconds=4300"></a>
   <a href="https://github.com/uhs-robert/comment-filename.nvim/network/members"><img src="https://img.shields.io/github/forks/uhs-robert/comment-filename.nvim?colorA=192330&colorB=CFA7FF&style=for-the-badge&cacheSeconds=4300"></a>
 </p>
